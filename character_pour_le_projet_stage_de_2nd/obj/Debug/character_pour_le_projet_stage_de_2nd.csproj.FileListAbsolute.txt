@@ -1,0 +1,8 @@
+C:\Users\Edmond Dantès H.B\Documents\projet_stage-2nd-jeu-RPG\character_pour_le_projet_stage_de_2nd\bin\Debug\character pour le projet stage de 2nd.exe.config
+C:\Users\Edmond Dantès H.B\Documents\projet_stage-2nd-jeu-RPG\character_pour_le_projet_stage_de_2nd\bin\Debug\character pour le projet stage de 2nd.exe
+C:\Users\Edmond Dantès H.B\Documents\projet_stage-2nd-jeu-RPG\character_pour_le_projet_stage_de_2nd\bin\Debug\character pour le projet stage de 2nd.pdb
+C:\Users\Edmond Dantès H.B\Documents\projet_stage-2nd-jeu-RPG\character_pour_le_projet_stage_de_2nd\obj\Debug\character_pour_le_projet_stage_de_2nd.csproj.AssemblyReference.cache
+C:\Users\Edmond Dantès H.B\Documents\projet_stage-2nd-jeu-RPG\character_pour_le_projet_stage_de_2nd\obj\Debug\character pour le projet stage de 2nd.exe.config
+C:\Users\Edmond Dantès H.B\Documents\projet_stage-2nd-jeu-RPG\character_pour_le_projet_stage_de_2nd\obj\Debug\character_pour_le_projet_stage_de_2nd.csproj.CoreCompileInputs.cache
+C:\Users\Edmond Dantès H.B\Documents\projet_stage-2nd-jeu-RPG\character_pour_le_projet_stage_de_2nd\obj\Debug\character pour le projet stage de 2nd.exe
+C:\Users\Edmond Dantès H.B\Documents\projet_stage-2nd-jeu-RPG\character_pour_le_projet_stage_de_2nd\obj\Debug\character pour le projet stage de 2nd.pdb

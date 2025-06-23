@@ -1,0 +1,8 @@
+C:\Users\Edmond Dantès H.B\source\repos\character pour le projet stage de 2nd\character pour le projet stage de 2nd\bin\Debug\character pour le projet stage de 2nd.exe.config
+C:\Users\Edmond Dantès H.B\source\repos\character pour le projet stage de 2nd\character pour le projet stage de 2nd\bin\Debug\character pour le projet stage de 2nd.exe
+C:\Users\Edmond Dantès H.B\source\repos\character pour le projet stage de 2nd\character pour le projet stage de 2nd\bin\Debug\character pour le projet stage de 2nd.pdb
+C:\Users\Edmond Dantès H.B\source\repos\character pour le projet stage de 2nd\character pour le projet stage de 2nd\obj\Debug\character pour le projet stage de 2nd.csproj.AssemblyReference.cache
+C:\Users\Edmond Dantès H.B\source\repos\character pour le projet stage de 2nd\character pour le projet stage de 2nd\obj\Debug\character pour le projet stage de 2nd.csproj.CoreCompileInputs.cache
+C:\Users\Edmond Dantès H.B\source\repos\character pour le projet stage de 2nd\character pour le projet stage de 2nd\obj\Debug\character pour le projet stage de 2nd.exe
+C:\Users\Edmond Dantès H.B\source\repos\character pour le projet stage de 2nd\character pour le projet stage de 2nd\obj\Debug\character pour le projet stage de 2nd.pdb
+C:\Users\Edmond Dantès H.B\source\repos\character pour le projet stage de 2nd\character pour le projet stage de 2nd\obj\Debug\character pour le projet stage de 2nd.exe.config
