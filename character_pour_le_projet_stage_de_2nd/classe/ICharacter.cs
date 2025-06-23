@@ -8,14 +8,13 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 {
     public interface ICharacter
     {
+        
         string nom { get; }
-        void Attaquer(ICharacter character);
+        int dmg { get; set; }
+        int PV { get; set; }
+        void Attaquer(ICharacter Attquant,ICharacter Cible);
         void Crier();
-        void Blesser(ICharacter character);
+        void Blesser(ICharacter Attaquant , ICharacter Cible);
         void Mourir();
-
-
-
-
     }
 }

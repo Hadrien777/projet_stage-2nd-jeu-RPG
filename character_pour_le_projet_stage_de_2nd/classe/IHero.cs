@@ -8,9 +8,9 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 {
 
 
-    public interface IHero
+    public interface IHero : ICharacter
     {
       
     }
     
-    }
+}

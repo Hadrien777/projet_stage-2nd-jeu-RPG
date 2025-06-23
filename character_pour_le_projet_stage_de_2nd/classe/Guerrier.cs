@@ -49,9 +49,9 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
 
         // Constructeur
-        public Guerrier(string nom, int att, int lvl, int DAtt, int pv,int dmg ) : base(nom, att, lvl, DAtt, pv,dmg)
+        public Guerrier(string nom, int att, int lvl, int DAtt, int PV,int dmg ) : base(nom, att, lvl, DAtt, PV,dmg)
         {
-            PV = pv;
+        
 
             GenererCarac("FORCE", Fval);
             GenererCarac("DEXTERITE", Dval);
@@ -75,17 +75,15 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         // Définir les propriété
         public void DefPropriete(int att, int pv, int dmg)
         {
-            att = 1;
+            this.att = att;
             PV = 10 + bonusCaracteristiques["CONSTITUTION"] + lvl;
-            dmg = att * bonusCaracteristiques["FORCE"] + 10;
+            this.dmg = this.att * bonusCaracteristiques["FORCE"] + 10;
 
 
         }
-        public override void Attaquer(ICharacter charactere)
+        public override void Attaquer(ICharacter Attaquant, ICharacter Cible)
         {
-            Console.WriteLine("Guerrier attaque " + charactere.nom);
-
-            Blesser(charactere);
+            Console.WriteLine("Guerrier attaque " + Cible.nom);
         }
     }
 }

@@ -66,6 +66,9 @@ namespace character_pour_le_projet_stage_de_2nd.classe
                 jetDeSauvegarde = value;
             }
         }
+        public int PV{ get; set; }
+        public int dmg { get; set; }
+
         #endregion
         public Character(string nom, int att,int PV)
         {
@@ -74,20 +77,23 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             PointDeVie = PV;
             Console.WriteLine("Charactere");
         }
-        public virtual void Attaquer(ICharacter character)
+
+        public virtual void Attaquer(ICharacter Attaquant, ICharacter Cible)
         {
-            Console.WriteLine("Character attaque " + character.nom);
+            Console.WriteLine("Character attaque " + Cible.nom);
         }
         
-        public void Blesser(ICharacter character)
+        public void Blesser(ICharacter Attaquant , ICharacter Cible)
         {
-            Console.WriteLine(character.nom + "crie Ailllle!!!");
-
+            Console.WriteLine(Cible.nom + " crie Ailllle!!!");
+            Cible.PV = Cible.PV - Attaquant.dmg;
         }
+
         public void Crier()
         {
-            Console.WriteLine(this.nom + "crie HUAAAAAAAAAAAAA!!");
+            Console.WriteLine(this.nom + " crie HUAAAAAAAAAAAAA!!");
         }
+
         public void Mourir()
         {
             Console.WriteLine(this.nom + " est Mort");

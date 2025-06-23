@@ -47,9 +47,9 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
 
         // Constructeur
-        public Mage(string nom, int att, int lvl, int DAtt, int pv, int dmg) : base(nom, att, lvl, DAtt, pv,dmg)
+        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg) : base(nom, att, lvl, DAtt, PV,dmg)
         {
-            PV = pv;
+
 
             GenererCarac("FORCE", Fval);
             GenererCarac("DEXTERITE", Dval);
@@ -78,9 +78,9 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         // Définir les propriété
         public void DefPropriete(int att, int pv, int dmg)
         {
-            att = 1;
+            this.att = att;
             PV = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
-            dmg = att * bonusCaracteristiques["FORCE"];
+            this.dmg = this.att * bonusCaracteristiques["FORCE"];
         }
     }
 

@@ -10,26 +10,19 @@ namespace character_pour_le_projet_stage_de_2nd.classe
     internal class Monstre : Character, IMonstre, ICharacter
     {
         public int PV { get; set; }
-        public int PVMonstre
+        public int dmg { get; set; }
+        public Monstre(string nom, int att, int lvl, int PV, int dmg) : base(nom, att, PV )
         {
-            get => PV; 
-            set
-            {
-                PV = value;
-            } 
-        }
-
-        public Monstre(string nom, int att, int lvl, int PVMontres) : base(nom, att, PVMontres )
-        {
-            int vit = WorldEngine.GetRandomValue(1, 3);
-            att = WorldEngine.GetRandomValue(8, 14) + lvl / 2;
-            PVMonstre = 5 + WorldEngine.GetRandomValue(3, 10) + lvl;
             lvl = WorldEngine.GetRandomValue(1, 10);
+            int vit = WorldEngine.GetRandomValue(1, 3);
+            att = 1;
+            this.PV = 5  + lvl;
+            this.dmg = att * (lvl + 5);
             bool BOSSE = lvl >= 10;
             if (BOSSE)
             {
                 att = 15;
-                PVMonstre = 30;
+                PV = 30;
                 vit = 2;
             }
         }
@@ -48,9 +41,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         }
 
             #endregion
-
-
-        void ICharacter.Attaquer(ICharacter character)
+        void ICharacter.Attaquer(ICharacter Attaquant, ICharacter Cible)
         {
             Console.WriteLine("Le Monstre attaque");
         }

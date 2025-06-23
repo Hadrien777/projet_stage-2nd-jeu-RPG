@@ -167,10 +167,12 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             }
         }
 
-        void ICharacter.Attaquer(ICharacter character)
+        void ICharacter.Attaquer(ICharacter Attaquant, ICharacter Cible)
         {
             Console.WriteLine("Héro attaque");
         }
+
+
     }
 }   public enum ClasseHero { GUERRIER, MAGE, PRETRE, VOLEUR }
 

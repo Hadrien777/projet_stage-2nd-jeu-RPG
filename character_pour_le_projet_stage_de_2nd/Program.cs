@@ -13,11 +13,11 @@ namespace character_pour_le_projet_stage_de_2nd
        
         static void Main(string[] args)
         {
+            string nom;
 
             int PV = 0;
             int DAtt = 1;
             int att = 0;
-            string nom;
             int lvl = 0;
             int dmg = 1;
 
@@ -32,20 +32,15 @@ namespace character_pour_le_projet_stage_de_2nd
 
             if ( choixClasse == "1" || choixClasse == "&")
             {
-                Guerrier joueur = new Guerrier(nom,att,dmg,lvl,DAtt,PV);
+                Guerrier joueur = new Guerrier(nom,1,dmg,lvl,DAtt,PV);
                 Hero joueur2 = new Hero(nom,att,dmg,lvl,DAtt,PV);
                 Console.WriteLine("vous avez Choisie un Guerrier");
+                Monstre goule = new Monstre("goule", att, lvl, PV, dmg);
+                Combat combat = new Combat( goule,joueur);
 
-                Monstre goule = new Monstre("Goule", 1, 1, 10);
+                combat.lancerCombat();
 
                 
-                joueur.Attaquer(goule);
-                joueur2.Attaquer(goule);
-                joueur.Crier();
-                goule.Attaquer(joueur);
-                goule.Blesser(joueur);
-
-                goule.Mourir();
             }
             else if (choixClasse == "2"|| choixClasse == "é")
             {
