@@ -13,6 +13,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         public int dmg { get; set; }
         public Monstre(string nom, int att, int lvl, int PV, int dmg) : base(nom, att, PV )
         {
+            Console.WriteLine(nom + "de lvl" + lvl);
             lvl = WorldEngine.GetRandomValue(1, 10);
             int vit = WorldEngine.GetRandomValue(1, 3);
             att = 1;
@@ -44,6 +45,12 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         void ICharacter.Attaquer(ICharacter Attaquant, ICharacter Cible)
         {
             Console.WriteLine("Le Monstre attaque");
+        }
+        void IMonstre.Crier(IMonstre monstre)
+        {
+            Console.WriteLine(this.nom + " crie HUAAAAAAAAAAAAA!!");
+            Console.WriteLine("La prochaine attaque du monstre sera plus forte");
+            monstre.dmg = monstre.dmg + 10;
         }
     }
 }

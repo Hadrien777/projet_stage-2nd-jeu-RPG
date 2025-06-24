@@ -10,6 +10,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         #region Propriete
         public int dmg { get; set; }
         public int PV { get; set; }
+        public int ClArmure { get; set; }
         public int att { get; set; }
 
         public int Fval { get; set; }
@@ -48,7 +49,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         }
 
         //constructeur
-        public Prêtre(string nom, int att, int lvl, int DAtt, int PV, int dmg) : base(nom, att, lvl, DAtt, PV,  dmg)
+        public Prêtre(string nom, int att, int lvl, int DAtt, int PV, int dmg, int ClArmure) : base(nom, att, lvl, DAtt, PV,  dmg,ClArmure)
         {
 
             

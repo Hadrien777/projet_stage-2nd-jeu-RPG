@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    internal class Mage : Hero
+    internal class Mage : Hero,IHero
     {
             public ClasseHero classePerso = ClasseHero.MAGE;
 
@@ -15,9 +15,9 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         public int PV { get; set; }
         public int att { get; set; }
         public int Fval { get; set; }
+        public int MP { get; set; } 
 
         public int Dval { get; set; }
-
         public int Conval { get; set; }
         public int Ival { get; set; }
         public int Sval { get; set; }
@@ -47,7 +47,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
 
         // Constructeur
-        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg) : base(nom, att, lvl, DAtt, PV,dmg)
+        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg,int MP,int ClArmure ) : base(nom, att, lvl, DAtt, PV,dmg, ClArmure)
         {
 
 
@@ -67,7 +67,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             GenrCarac("CHARISME",Chval);
 
 
-            DefPropriete(att, PV, dmg);
+            DefPropriete(att, PV, dmg,MP);
 
             Console.WriteLine(att);
             Console.WriteLine("Mage et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + PV + " EN PV");
@@ -76,12 +76,14 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
 
         // Définir les propriété
-        public void DefPropriete(int att, int pv, int dmg)
+        public void DefPropriete(int att, int pv, int dmg,int MP)
         {
             this.att = att;
             PV = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
             this.dmg = this.att * bonusCaracteristiques["FORCE"];
+            this.MP = caracteristiques["INTELIGENCE"] + bonusCaracteristiques["SAGESSE"];
         }
+
     }
 
 }

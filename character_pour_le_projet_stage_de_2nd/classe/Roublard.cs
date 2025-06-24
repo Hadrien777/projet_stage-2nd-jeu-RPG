@@ -46,7 +46,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             GenrCarac(nomCarac, val);
 
         }
-        public Roublard (string nom, int att, int lvl, int DAtt,int pv, int dmg) : base(nom, att, lvl, DAtt,pv,dmg)
+        public Roublard (string nom, int att, int lvl, int DAtt,int pv, int dmg,int ClArmure) : base(nom, att, lvl, DAtt,pv,dmg,ClArmure)
         {
 
 

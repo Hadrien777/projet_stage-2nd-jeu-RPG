@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    public interface IMonstre : ICharacter
+    internal interface IMap
     {
-        void Crier(IMonstre monstre);
+        void map();
+        void Magasin();
+        void Taverne();
+        void Eglise();
+        void GuilDesAventurier();
+        void Donjons();
     }
 }

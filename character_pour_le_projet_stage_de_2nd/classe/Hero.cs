@@ -28,7 +28,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
                 niveau = value;
             }
         }
-
+        public int ClArmure { get; set; }
         public int expEnCours
         {
             get => experienceENCours;
@@ -41,7 +41,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         public int dmg { get; set; }
 
         //Constructeur
-        public Hero(string nom, int att,int dmg, int lvl, int DAtt, int PV) : base(nom, att, PV)
+        public Hero(string nom, int att,int dmg, int lvl, int DAtt, int PV, int ClArmure) : base(nom, att, PV)
         {
             string nomCara;
             int val;
@@ -89,24 +89,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
         }
 
-            public void Listes()
-        {
-            List<Hero> caracteristique = new List<Hero>();
-            caracteristiques.Add("FORCE", 0);
-            caracteristiques.Add("CONSTITUTION", 0);
-            caracteristiques.Add("DEXTERITE", 0);
-            caracteristiques.Add("INTELIGENCE", 0);
-            caracteristiques.Add("SAGESSE", 0);
-            caracteristiques.Add("CHARISME", 0);
-
-            List<Hero> bonusCaracteristique = new List<Hero>();
-            bonusCaracteristiques.Add("FORCE", 0);
-            bonusCaracteristiques.Add("CONSTITUTION", 0);
-            bonusCaracteristiques.Add("DEXTERITE", 0);
-            bonusCaracteristiques.Add("INTELIGENCE", 0);
-            bonusCaracteristiques.Add("SAGESSE", 0);
-            bonusCaracteristiques.Add("CHARISME", 0);
-        }
 
 
 
@@ -171,8 +153,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         {
             Console.WriteLine("Héro attaque");
         }
-
-
     }
 }   public enum ClasseHero { GUERRIER, MAGE, PRETRE, VOLEUR }
 

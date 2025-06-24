@@ -70,7 +70,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         public int dmg { get; set; }
 
         #endregion
-        public Character(string nom, int att,int PV)
+        public Character(string nom, int att, int PV)
         {
             Nom = nom;
             NombreAttaque = att;
