@@ -47,7 +47,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
 
         // Constructeur
-        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg,int MP,int ClArmure ) : base(nom, att, lvl, DAtt, PV,dmg, ClArmure)
+        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg,int MP,int ClArmure) : base(nom, att, lvl, DAtt, PV,dmg, ClArmure)
         {
 
 

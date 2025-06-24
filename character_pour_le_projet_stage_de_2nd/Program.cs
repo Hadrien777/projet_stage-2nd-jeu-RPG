@@ -8,82 +8,202 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd
 {
-    internal class Program 
+    internal class Program : IMap
     {
-
-     
-
-
-
-
+        public string nom {  get; set; }
+        public int PV { get; set; }
+        public int DAtt { get; set; }
+        public int att { get; set; }
+        public int lvl { get; set; }
+        public int dmg { get; set; }
+        public int ClArmure { get; set; }
+        public int or { get; set; }
+        public int MP { get; set; }
         static void Main(string[] args)
         {
-           
-
-
             string nom;
-
-            int PV = 0;
-            int DAtt = 1;
-            int att = 0;
-            int lvl = 0;
-            int dmg = 1;
+            int PV= 10;
+            int DAtt=2;
+            int att=1;
+            int lvl=1;
+            int dmg = 10;
             int ClArmure = 1;
+            int or = 9;
             int MP = 1;
 
             Console.WriteLine("Bonjourd veuillez saisir votre nom");
             nom = Console.ReadLine();
 
-            Map carte = new Map();
-            carte.map();
+            IMap carte = new Program();
 
             string choixClasse;
             Console.WriteLine(" \n\n Quel classe voulez vous choisir ?  \n[1] pour Guerrier   [2]pour Roublard [3]pour Mage [4] pour Prêtre \n (Pour votre première partie le Guerrier est conseiller)");
             choixClasse = Console.ReadLine();
 
-            while (choixClasse != null)
+            Hero joueur = new Hero(nom, att, dmg, lvl, DAtt, PV, ClArmure);
+            while (choixClasse == "")
             {
                 if (choixClasse == "1" || choixClasse == "&")
                 {
-                    Guerrier joueur = new Guerrier(nom, 1, dmg, lvl, DAtt, PV, ClArmure);
+                    joueur = new Guerrier(nom, 1, dmg, lvl, DAtt, PV, ClArmure);
                     Hero joueur2 = new Hero(nom, att, dmg, lvl, DAtt, PV, ClArmure);
                     Console.WriteLine("vous avez Choisie un Guerrier");
-                    Monstre goule = new Monstre("goule", att, lvl, PV, dmg);
-                    Combat combat = new Combat(goule, joueur);
-
-                    combat.lancerCombat();
-
-
                 }
                 else if (choixClasse == "2" || choixClasse == "é")
                 {
-                    Roublard joueur = new Roublard(nom, att, dmg, lvl, DAtt, PV, ClArmure);
+                    joueur = new Roublard(nom, att, dmg, lvl, DAtt, PV, ClArmure);
                     Console.WriteLine("vous avez Choisie un Roublard");
                 }
                 else if (choixClasse == "3" || choixClasse == "\"")
                 {
-                    Mage joueur = new Mage(nom, att, dmg, lvl, DAtt, PV, MP, ClArmure);
+                    joueur = new Mage(nom, att, dmg, lvl, DAtt, PV, MP, ClArmure);
                     Console.WriteLine("vous avez Choisie un Mage");
                 }
                 else if (choixClasse == "4" || choixClasse == "'")
                 {
-                    Prêtre joueur = new Prêtre(nom, att, dmg, lvl, DAtt, PV, ClArmure);
+                    joueur = new Prêtre(nom, att, dmg, lvl, DAtt, PV, ClArmure);
                     Console.WriteLine("vous avez Choisie un Prêtre");
                 }
                 else
                 {
                     Console.WriteLine("Vous avez appyer sur la mauvaise touche est vous avez contrarier le jeux ):<( ");
                 }
-            }
 
-                Console.ReadLine();
+
+            }
+          carte.map(joueur);
+        }
+
+        //Carte Du Monde
+        public void Magasin()
+        {
+            Console.WriteLine("Vous êtes dans le magasin");
+        }
+        public void Taverne(Hero joueur)
+        {
+            string ChoixJoueur;
+            bool sortir = false;
+
+            while(sortir == false)
+            {
+                Console.WriteLine("Vous êtes dans la Taverne, que voulez vous faire ? \n [1]se reposer [2]recruter un nouveau compagnion (10 piece d'or) [3]sortir");
+                ChoixJoueur = Console.ReadLine();
+                if (ChoixJoueur == "1" || ChoixJoueur == "&")
+                {
+                    Console.WriteLine("vous passer une merveilleuse nuit");
+                    joueur.PV = joueur.PVMax;
+                }
+                else if (ChoixJoueur == "2" || ChoixJoueur == "é")
+                {
+                    if (or < 10)
+                    {
+                        Console.WriteLine("Tavernier: Vous êtes trop PAUUUVRE revener quand vous serez plus $RICHE$!\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine(" \n\n Quel Aventurier vouler vous choisir ?  \n[1] pour un Guerrier   [2]pour un Roublard [3]pour un Mage [4] pour un Prêtre");
+                        string ChoixCompagnon;
+                        ChoixCompagnon = Console.ReadLine();
+
+                        Hero Compagnion = new Hero(nom, att, dmg, lvl, DAtt, PV, ClArmure);
+                        while (ChoixCompagnon == "")
+                        {
+                            if (ChoixCompagnon == "1" || ChoixCompagnon == "&")
+                            {
+                                Hero compagnon = new Guerrier(nom, 1, dmg, lvl, DAtt, PV, ClArmure);
+                                Console.WriteLine("vous avez Choisie un Guerrier");
+                            }
+                            else if (ChoixCompagnon == "2" || ChoixCompagnon == "é")
+                            {
+                                Hero compagnon = new Roublard(nom, att, dmg, lvl, DAtt, PV, ClArmure);
+                                Console.WriteLine("vous avez Choisie un Roublard");
+                            }
+                            else if (ChoixCompagnon == "3" || ChoixCompagnon == "\"")
+                            {
+                                Hero compagnion = new Mage(nom, att, dmg, lvl, DAtt, PV, MP, ClArmure);
+                                Console.WriteLine("vous avez Choisie un Mage");
+                            }
+                            else if (ChoixCompagnon == "4" || ChoixCompagnon == "'")
+                            {
+                                Hero compagnon = new Prêtre(nom, att, dmg, lvl, DAtt, PV, ClArmure);
+                                Console.WriteLine("vous avez Choisie un Prêtre");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Vous avez appyer sur la mauvaise touche est vous avez contrarier le jeux ):<( ");
+                            }
+                        }
+                    }
+                }
+                else if (ChoixJoueur == "3" || ChoixJoueur == "\"")
+                {
+                    sortir = true;
+                }
+            }
+           
+        }
+        public void Eglise()
+        {
+            Console.WriteLine("Vous êtes dans l'Eglise");
+        }
+        public void GuilDesAventurier()
+        {
+            Console.WriteLine("Vous êtes dans la Guil des Aventurier");
+        }
+        public void Donjons(Hero joueur )
+        {
+
+            Console.WriteLine("Vous entrer dans le Donjon");
+            
+            Monstre goule = new Monstre("goule", att, WorldEngine.GetRandomValue(1,5), PV, dmg);
+            Combat combat = new Combat(goule, joueur);
+            combat.lancerCombat();
+            Console.ReadLine();
+          
 
         }
 
-            
-    
+        public void map(Hero joueur)
+        {
+            Console.WriteLine("Vous êtes sur la carte");
+            string endroit;
+            bool quitterLeJeu = false;
+            while(quitterLeJeu == false)
+            {
+                Console.WriteLine("Dans quel endroit voulez vous allez ? \n [1] Magasin [2] Taverne [3] Eglise [4] GuilDesAventurier [5] Donjons [Q]Pour quitter le jeu");
+                endroit = Console.ReadLine();
+                if (endroit == "1" || endroit == "&")
+                {
+                    Magasin();
+                }
+                else if (endroit == "2" || endroit == "é")
+                {
+                    Taverne(joueur);
+                }
+                else if (endroit == "3" || endroit == "\"")
+                {
+                    Eglise();
+                }
+                else if (endroit == "4" || endroit == "'")
+                {
+                    GuilDesAventurier();
+                }
+                else if (endroit == "5" || endroit == "(")
+                {
+                    Donjons(joueur);
+                   
+                }
+                else if(endroit == "Q" || endroit == "q")
+                {
+                    quitterLeJeu = true;
+                }
+                else
+                {
+                    Console.WriteLine("... Vous vous paumer et rechercher le village Pendant des heures en vain");
+                }
+            }
+           
+
+        }
     }
-
-}
-    
-
+}  

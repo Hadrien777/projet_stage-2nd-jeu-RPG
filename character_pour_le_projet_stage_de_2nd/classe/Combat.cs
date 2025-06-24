@@ -38,10 +38,8 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             }
         }
 
-
         int fuirMonstre = 0;
         bool Jmort=false;
-
 
         public void tourDuJoueur()
         {
@@ -106,13 +104,15 @@ namespace character_pour_le_projet_stage_de_2nd.classe
                 {
                     Hero.Mourir();
                     Jmort = true;
+                    break;
+                }
+
+                if (Jmort == false)
+                {
+                    
+                    Console.WriteLine("Victoire vous obtener");
                 }
             }
         }
     }
 }
-
-
-
-    
-

@@ -8,11 +8,11 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 {
     internal interface IMap
     {
-        void map();
+        void map(Hero joueur);
         void Magasin();
-        void Taverne();
+        void Taverne(Hero joueur);
         void Eglise();
         void GuilDesAventurier();
-        void Donjons();
+        void Donjons(Hero character);
     }
 }

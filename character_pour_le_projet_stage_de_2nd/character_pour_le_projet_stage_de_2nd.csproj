@@ -52,7 +52,6 @@
     <Compile Include="classe\IMonstre.cs" />
     <Compile Include="classe\Mage.cs" />
     <Compile Include="classe\IMap.cs" />
-    <Compile Include="classe\Map.cs" />
     <Compile Include="classe\Monstre.cs" />
     <Compile Include="classe\Prêtre.cs" />
     <Compile Include="classe\Roublard.cs" />

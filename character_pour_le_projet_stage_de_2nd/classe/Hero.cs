@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    internal  class Hero : Character, ICharacter
+    internal  class Hero : Character, ICharacter, IHero
     {
         protected int niveau;
         protected int experienceENCours;
@@ -37,12 +37,14 @@ namespace character_pour_le_projet_stage_de_2nd.classe
                 experienceENCours = value;
             }
         }
+        public int PVMax { get; set; }
 
         public int dmg { get; set; }
 
         //Constructeur
         public Hero(string nom, int att,int dmg, int lvl, int DAtt, int PV, int ClArmure) : base(nom, att, PV)
         {
+            PointDeVieMax = PVMax;
             string nomCara;
             int val;
             InitialisCarac();          
@@ -88,11 +90,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             }
 
         }
-
-
-
-
-
 
         //buf et débuf des Carac
         protected void GenrCarac(string nomCara, int val)
