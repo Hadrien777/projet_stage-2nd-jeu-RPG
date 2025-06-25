@@ -11,8 +11,8 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             public ClasseHero classePerso = ClasseHero.MAGE;
 
         #region Propriete
-        public int dmg { get; set; }
-        public int PV { get; set; }
+        new public int dmg { get; set; }
+        new public int PV { get; set; }
         public int att { get; set; }
         public int Fval { get; set; }
         public int MP { get; set; } 
@@ -47,9 +47,8 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
 
         // Constructeur
-        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg,int MP,int ClArmure) : base(nom, att, lvl, DAtt, PV,dmg, ClArmure)
+        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg,int MP,int ClArmure,int or) : base(nom, att, lvl, DAtt, PV,dmg, ClArmure,or)
         {
-
 
             GenererCarac("FORCE", Fval);
             GenererCarac("DEXTERITE", Dval);
@@ -58,7 +57,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             GenererCarac("SAGESSE", Sval);
             GenererCarac("CHARISME", Chval);
             
-            
             GenrCarac("FORCE", Fval);
             GenrCarac("DEXTERITE", Dval);
             GenrCarac("CONSTITUTION", Conval);
@@ -66,20 +64,18 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             GenrCarac("SAGESSE", Sval);
             GenrCarac("CHARISME",Chval);
 
-
-            DefPropriete(att, PV, dmg,MP);
+            DefPropriete(att, PVMax, dmg,MP);
 
             Console.WriteLine(att);
-            Console.WriteLine("Mage et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + PV + " EN PV");
+            Console.WriteLine("Mage et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + this.PV + " EN PV");
         }
 
-
-
         // Définir les propriété
-        public void DefPropriete(int att, int pv, int dmg,int MP)
+        public void DefPropriete(int att, int PV, int dmg,int MP)
         {
             this.att = att;
-            PV = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
+            PVMax = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
+            this.PV = PVMax;
             this.dmg = this.att * bonusCaracteristiques["FORCE"];
             this.MP = caracteristiques["INTELIGENCE"] + bonusCaracteristiques["SAGESSE"];
         }

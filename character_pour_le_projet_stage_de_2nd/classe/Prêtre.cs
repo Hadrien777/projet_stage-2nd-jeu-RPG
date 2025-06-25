@@ -49,7 +49,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         }
 
         //constructeur
-        public Prêtre(string nom, int att, int lvl, int DAtt, int PV, int dmg, int ClArmure) : base(nom, att, lvl, DAtt, PV,  dmg,ClArmure)
+        public Prêtre(string nom, int att, int lvl, int DAtt, int PV, int dmg, int ClArmure, int or) : base(nom, att, lvl, DAtt, PV,  dmg,ClArmure,or)
         {
 
             
@@ -69,16 +69,17 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             GenrCarac("CHARISME", Chval);
 
 
-            DefPropriete(att, PV, dmg);
+            DefPropriete(att, PVMax, dmg);
 
             Console.WriteLine(att);
-            Console.WriteLine("Prêtre et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + PV + " EN PV");
+            Console.WriteLine("Prêtre et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + this.PV + " EN PV");
         }
         // Définir les propriété
         public void DefPropriete(int att, int pv, int dmg)
         {
             this.att = 1;
-            PV = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
+            PVMax = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
+            PV= PVMax;
             this.dmg = this.att * bonusCaracteristiques["FORCE"];
         }
     }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
@@ -11,35 +6,35 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
     public partial class Combat
     {
-        public IMonstre Monstre;
-        public IHero Hero;
-
-        public Combat(IMonstre nomMonstre, IHero nomHero)
+        public Monstre Monstre;
+        public IHero hero;
+        public Combat(Monstre nomMonstre, IHero joueur)
         {
             Monstre = nomMonstre;
-            Hero = nomHero;
+            hero = joueur;
         }
-
 
         public void TourDuMonstre()
         {
             int AMonstre;
-            Console.WriteLine("C'est au tour du " + Monstre.nom );
-            AMonstre=WorldEngine.GetRandomValue(1, 2);
-            
+            Console.WriteLine("C'est au tour du " + Monstre.nom);
+            AMonstre = WorldEngine.GetRandomValue(1, 1);
+
             if (AMonstre == 1)
             {
-                Monstre.Attaquer(Monstre,Hero);
-                Monstre.Blesser(Monstre,Hero);
+                Monstre.Attaquer(Monstre, hero);
+                Monstre.Blesser(Monstre, hero);
+
             }
-            else if(AMonstre==2) 
+            else if (AMonstre == 2)
             {
                 Monstre.Crier();
             }
+
         }
 
         int fuirMonstre = 0;
-        bool Jmort=false;
+        bool Jmort = false;
 
         public void tourDuJoueur()
         {
@@ -49,8 +44,8 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
             if (choixJoueur == "1" || choixJoueur == "&")
             {
-                Hero.Attaquer(Hero, Monstre);
-                Hero.Blesser(Hero, Monstre);
+                hero.Attaquer(hero, Monstre);
+                hero.Blesser(hero, Monstre);
                 if (Monstre.PV <= 0)
                 {
                     Console.WriteLine("Bravo le monstre est mort");
@@ -58,12 +53,12 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             }
             else if (choixJoueur == "2" || choixJoueur == "é")
             {
-                Hero.Crier();
+                hero.Crier();
                 fuirMonstre++;
             }
             else if (choixJoueur == "3" || choixJoueur == "\"")
             {
-                Hero.Mourir();
+                hero.Mourir();
                 Jmort = true;
                 Console.WriteLine(" Vous êtes mort");
             }
@@ -74,45 +69,32 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         }
 
         public void lancerCombat()
-        {
-            Console.WriteLine("le combat Comence entre " + Monstre.nom + " et " + Hero.nom );
-            int tours = 0;
 
-            while ((Monstre.PV >0 && fuirMonstre < 2) && Jmort == false)
+        {
+            Console.WriteLine("le combat Comence entre " + Monstre.nom + " et " + hero.nom);
+            int tours = 0;
+            bool Jmort = false;
+
+            while ((Monstre.PV > 0 && fuirMonstre < 2) && Jmort == false)
             {
                 tours++;
                 if (tours > 1)
                 {
-                    Console.WriteLine("Tours " + tours);
+                    Console.WriteLine("\nTours " + tours);
                     TourDuMonstre();
-                    if (Hero.PV <= 0)
-                    {
-                        Hero.Mourir();
-                        Jmort = true;
-                        break;
-                    }
-
                 }
                 tourDuJoueur();
                 if (fuirMonstre >= 2)
                 {
                     Console.WriteLine("Le monstre fuit");
                 }
-
-
-                if (Hero.PV <= 0)
+                if (hero.PV == 0)
                 {
-                    Hero.Mourir();
+                    Console.WriteLine("le Hero est mort");
                     Jmort = true;
-                    break;
-                }
-
-                if (Jmort == false)
-                {
-                    
-                    Console.WriteLine("Victoire vous obtener");
                 }
             }
+
         }
     }
 }

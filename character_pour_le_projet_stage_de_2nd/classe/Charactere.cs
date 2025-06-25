@@ -2,7 +2,7 @@
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    internal abstract class Character : ICharacter
+    public abstract class Character : ICharacter
     {
 
         public string Nom;
@@ -80,13 +80,18 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
         public virtual void Attaquer(ICharacter Attaquant, ICharacter Cible)
         {
-            Console.WriteLine("Character attaque " + Cible.nom);
+            Console.WriteLine(Attaquant.nom +" attaque " + Cible.nom);
         }
         
         public void Blesser(ICharacter Attaquant , ICharacter Cible)
         {
             Console.WriteLine(Cible.nom + " crie Ailllle!!!");
             Cible.PV = Cible.PV - Attaquant.dmg;
+            if (Cible.PV > 0)
+            {
+                Cible.PV = 0;
+            }
+            Console.WriteLine("Il reste " + Cible.PV + " PV à " + Cible.nom);
         }
 
         public void Crier()

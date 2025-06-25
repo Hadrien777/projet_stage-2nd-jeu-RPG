@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    internal class Monstre : Character, IMonstre, ICharacter
+    public class Monstre : Character, IMonstre, ICharacter
     {
         public int PV { get; set; }
         public int dmg { get; set; }
@@ -18,7 +18,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             int vit = WorldEngine.GetRandomValue(1, 3);
             att = 1;
             this.PV = 5  + lvl;
-            this.dmg = att * (lvl + 5);
+            this.dmg = att * (lvl + 3);
             bool BOSSE = lvl >= 10;
             if (BOSSE)
             {
@@ -50,8 +50,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         {
             Console.WriteLine(this.nom + " crie HUAAAAAAAAAAAAA!!");
             Console.WriteLine("La prochaine attaque du monstre sera plus forte");
-            monstre.dmg = monstre.dmg + 10;
+            monstre.dmg = monstre.dmg + 1;
         }
     }
 }
-

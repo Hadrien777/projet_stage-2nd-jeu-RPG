@@ -46,7 +46,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             GenrCarac(nomCarac, val);
 
         }
-        public Roublard (string nom, int att, int lvl, int DAtt,int pv, int dmg,int ClArmure) : base(nom, att, lvl, DAtt,pv,dmg,ClArmure)
+        public Roublard (string nom, int att, int lvl, int DAtt,int PV, int dmg,int ClArmure, int or) : base(nom, att, lvl, DAtt,PV,dmg,ClArmure, or)
         {
 
 
@@ -61,17 +61,18 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             {
                 GenrCarac(caracteristique.Key, caracteristique.Value);
             }
-            DefPropriete(att, PV, dmg);
+            DefPropriete(att, PVMax, dmg);
 
             Console.WriteLine(att);
-            Console.WriteLine("Guerrier et j'ai " + caracteristiques["FORCE"] + " en Force !!!!  mais que  " + caracteristiques["DEXTERITE"] + " en dexteritées (-_-°) ET j'ai " + PV + " EN PV");
+            Console.WriteLine("Roublard et j'ai " + caracteristiques["FORCE"] + " en Force !!!!  mais que  " + caracteristiques["DEXTERITE"] + " en dexteritées (-_-°) ET j'ai " + this.PV + " EN PV");
         }
         // Définir les propriété
-        public void DefPropriete(int att, int pv, int dmg)
+        public void DefPropriete(int att, int PV, int dmg)
         {
             this.att = att;
-            PV = 10 + bonusCaracteristiques["CONSTITUTION"] + lvl;
-            this.dmg = this.att * bonusCaracteristiques["FORCE"];
+            PVMax = 10 + bonusCaracteristiques["CONSTITUTION"] + lvl;
+            this.PV = PVMax;
+            this.dmg = this.att * bonusCaracteristiques["FORCE"]+2;
 
         }
 
