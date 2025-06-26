@@ -64,7 +64,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             DefPropriete(att, PVMax, dmg);
 
             Console.WriteLine(att);
-            Console.WriteLine("Roublard et j'ai " + caracteristiques["FORCE"] + " en Force !!!!  mais que  " + caracteristiques["DEXTERITE"] + " en dexteritées (-_-°) ET j'ai " + this.PV + " EN PV");
+            Console.WriteLine("Je m'appelle "+nom+ "et j'ai " + caracteristiques["FORCE"] + " en Force !!!!  mais que  " + caracteristiques["DEXTERITE"] + " en dexteritées (-_-°) ET j'ai " + this.PV + " EN PV");
         }
         // Définir les propriété
         public void DefPropriete(int att, int PV, int dmg)

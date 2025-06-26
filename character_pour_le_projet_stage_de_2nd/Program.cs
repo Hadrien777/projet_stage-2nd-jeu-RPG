@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd
 {
-    internal class Program :  IMap
+    public class Program : IMap
     {
+        #region Proprieté
         public string nom { get; set; }
         public int PV { get; set; }
         public int DAtt { get; set; }
@@ -34,7 +35,6 @@ namespace character_pour_le_projet_stage_de_2nd
             int ClArmure = 1;
             int or = 10;
             int MP = 1;
-            int nbCompagnon = 0;
 
             Console.WriteLine("Bonjourd veuillez saisir votre nom");
             nom = Console.ReadLine();
@@ -45,7 +45,7 @@ namespace character_pour_le_projet_stage_de_2nd
 
             Hero joueur = new Hero(nom, att, dmg, lvl, DAtt, PV, ClArmure, or);
 
-            while (choixClasse == "")
+            while (choixClasse != "1" && choixClasse != "&"&& choixClasse != "2" && choixClasse != "é" && choixClasse != "3" && choixClasse != "\"" && choixClasse != "4" && choixClasse != "'" )
             {
                 Console.WriteLine(" \n\n Quel classe voulez vous choisir ?  \n[1] pour Guerrier   [2]pour Roublard [3]pour Mage [4] pour Prêtre \n (Pour votre première partie le Guerrier est conseiller)");
                 choixClasse = Console.ReadLine();
@@ -78,12 +78,17 @@ namespace character_pour_le_projet_stage_de_2nd
                 carte.map(joueur);
             }
         }
+        List<Item> Inventaire = new List<Item>();
+        #endregion
+
+
+
         //Carte Du Monde
         public void Magasin(Hero joueur)
-        {
+       {
             bool sortie = false;
             string choixObjet = "";
-
+            
             while (sortie == false)
             {
                 Console.WriteLine("Vous êtes dans le magasin il y a en boutique : \n [1]Bombe(tue les ennemie instantanement:10 piece d'or) [2]épée(ameliore les dmg :5 piece d'or) \n\n [3]un arc(agrendit la distence d'attaque: 5 piece d'or) [4]une potion de soins(soigne tous vaux PV : 10 Piece d'or) \n\n vous avez "+joueur.or +" d'or [5]partir ");
@@ -91,20 +96,28 @@ namespace character_pour_le_projet_stage_de_2nd
                 if (choixObjet == "1" || choixObjet == "&")
                 {
                     Console.WriteLine("vous achheter une bombe");
+                    joueur.or = joueur.or - 10;
+                    Inventaire.Add(new Bombe(1)); 
                 }
                 else if (choixObjet == "2" || choixObjet == "é")
                 {
                     Console.WriteLine("vous achetez une épée");
+                    joueur.or = joueur.or - 5;
+                    Inventaire.Add(new Epee(1));
                 }
                 else if (choixObjet == "3" || choixObjet == "\"")
                 {
                     Console.WriteLine("Vous acheter un arc ");
+                    joueur.or = joueur.or - 5;
+                    Inventaire.Add(new Arc(1));
                 }
                 else if (choixObjet == "4" || choixObjet == "'")
                 {
                     Console.WriteLine("Vous achetez une potion de soin");
+                    joueur.or = joueur.or - 10;
+                    Inventaire.Add(new PotionSoin(1));
                 }
-                else if (choixObjet == "("|| choixObjet == "5")
+                else if (choixObjet == "(" || choixObjet == "5")
                 {
                     sortie = true;
                 }
@@ -114,7 +127,6 @@ namespace character_pour_le_projet_stage_de_2nd
                     sortie = true;
                 }
             }
-           
         }
        public void Taverne(Hero joueur)
              {
@@ -124,7 +136,8 @@ namespace character_pour_le_projet_stage_de_2nd
                 while (sortir == false)
                 {
                     Console.WriteLine("Vous êtes dans la Taverne, que voulez vous faire ? \n [1]se reposer [2]recruter un nouveau compagnion (10 piece d'or) [3]sortir");
-                    ChoixJoueur = Console.ReadLine();
+                    Console.WriteLine("Vous avez "+ joueur.or+" piece d'or");
+                   ChoixJoueur = Console.ReadLine();
                     if (ChoixJoueur == "1" || ChoixJoueur == "&")
                     {
                         Console.WriteLine("vous passer une merveilleuse nuit");
@@ -149,31 +162,32 @@ namespace character_pour_le_projet_stage_de_2nd
                                 ChoixCompagnon = Console.ReadLine();
                                 if (ChoixCompagnon == "1" || ChoixCompagnon == "&")
                                 {
-                                    Hero compagnon = new Guerrier(nom, 1, dmg, lvl, DAtt, PV, ClArmure, or);
+                                    Hero compagnon = new Guerrier("Jean", 1, dmg, lvl, DAtt, PV, ClArmure, or);
                                     Console.WriteLine("vous avez Choisie un Guerrier");
                                     nbCompagnon++;
                                     equipe[nbCompagnon] = compagnon;
                                 }
                                 else if (ChoixCompagnon == "2" || ChoixCompagnon == "é")
                                 {
-                                    Hero compagnon = new Roublard(nom, att, dmg, lvl, DAtt, PV, ClArmure, or);
+                                    Hero compagnon = new Roublard("Michelle", att, dmg, lvl, DAtt, PV, ClArmure, or);
                                     Console.WriteLine("vous avez Choisie un Roublard");
                                     nbCompagnon++;
                                     equipe[nbCompagnon] = compagnon;
                                 }
                                 else if (ChoixCompagnon == "3" || ChoixCompagnon == "\"")
                                 {
-                                    Hero compagnon = new Mage(nom, att, dmg, lvl, DAtt, PV, MP, ClArmure, or);
+                                    Hero compagnon = new Mage("Maria", att, dmg, lvl, DAtt, PV, MP, ClArmure, or);
                                     Console.WriteLine("vous avez Choisie un Mage");
                                     nbCompagnon++;
                                     equipe[nbCompagnon] = compagnon;
                                 }
                                 else if (ChoixCompagnon == "4" || ChoixCompagnon == "'")
                                 {
-                                    Hero compagnon = new Prêtre(nom, att, dmg, lvl, DAtt, PV, ClArmure , or);
+                                    Hero compagnon = new Prêtre("Uber", att, dmg, lvl, DAtt, PV, ClArmure , or);
                                     Console.WriteLine("vous avez Choisie un Prêtre");
                                     nbCompagnon++;
                                     equipe[nbCompagnon] = compagnon;
+                                    
                                 }
                                 else
                                 {
@@ -198,32 +212,30 @@ namespace character_pour_le_projet_stage_de_2nd
             Console.WriteLine("Vous êtes dans l'Eglise");
         }
        public void GuilDesAventurier(Hero joueur)
-        {
-            Console.WriteLine("Vous êtes dans la Guil des Aventurier");
-        }
-       public void Donjons(IHero joueur)
+       {
+
+            Console.WriteLine("Vous êtes dans la Guilde des Aventurier");
+       }
+       public void Donjons(IHero joueur )
+       {
+            Console.WriteLine("Vous entrer dans le Donjon");
+            Monstre goule = new Monstre("goule", 1, WorldEngine.GetRandomValue(1+joueur.lvl, 5+joueur.lvl), PV, dmg);
+            Combat combat = new Combat(goule, equipe);
+            combat.lancerCombat(nbCompagnon );
+             if (joueur.PV >0)
              {
-
-                Console.WriteLine("Vous entrer dans le Donjon");
-
-                Monstre goule = new Monstre("goule", 1, WorldEngine.GetRandomValue(1, 5), PV, dmg);
-                Combat combat = new Combat(goule, joueur);
-                combat.lancerCombat();
-                if (joueur.PV >0)
-                {
-                    Console.WriteLine("Victoire vous obtener 10 or");
-                    joueur.or = joueur.or + 10;
-                }
-                Console.ReadLine();
-
+               Console.WriteLine("Victoire vous obtener 10 or et 1 niveau ");
+               joueur.or = joueur.or + 10;
+               joueur.lvl= joueur.lvl + 1;
              }
-
-        public void map(Hero joueur)
-             {
-                Console.WriteLine("Vous êtes sur la carte");
-                string endroit;
-                bool quitterLeJeu = false;
-                while (quitterLeJeu == false)
+            Console.ReadLine();
+       }
+       public void map(Hero joueur)
+       {
+            Console.WriteLine("Vous êtes sur la carte");
+            string endroit;
+            bool quitterLeJeu = false;
+            while (quitterLeJeu == false)
             {
                 Console.WriteLine("Dans quel endroit voulez vous allez ? \n [1] Magasin [2] Taverne [3] Eglise [4] GuilDesAventurier [5] Donjons [Q]Pour quitter le jeu");
                 endroit = Console.ReadLine();
@@ -256,8 +268,6 @@ namespace character_pour_le_projet_stage_de_2nd
                     Console.WriteLine("... Vous vous paumer et rechercher le village Pendant des heures en vain");
                 }
             }
-             }
-
+       }
     }
-
 } 

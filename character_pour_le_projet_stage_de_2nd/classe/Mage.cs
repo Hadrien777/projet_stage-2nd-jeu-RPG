@@ -67,7 +67,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             DefPropriete(att, PVMax, dmg,MP);
 
             Console.WriteLine(att);
-            Console.WriteLine("Mage et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + this.PV + " EN PV");
+            Console.WriteLine("Je m'appelle" + nom + " et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + this.PV + " EN PV");
         }
 
         // Définir les propriété

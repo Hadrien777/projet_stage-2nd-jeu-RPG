@@ -72,14 +72,14 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             DefPropriete(att, PVMax, dmg);
 
             Console.WriteLine(att);
-            Console.WriteLine("Prêtre et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + this.PV + " EN PV");
+            Console.WriteLine("Je m'appelle "+nom +" et j'ai " + caracteristiques["FORCE"] + " en Force ):  mais j'ai  " + caracteristiques["INTELIGENCE"] + " en Inteligence !!! ET j'ai " + this.PV + " EN PV");
         }
         // Définir les propriété
-        public void DefPropriete(int att, int pv, int dmg)
+        public void DefPropriete(int att, int PV, int dmg)
         {
             this.att = 1;
             PVMax = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
-            PV= PVMax;
+            this.PV= PVMax;
             this.dmg = this.att * bonusCaracteristiques["FORCE"];
         }
     }

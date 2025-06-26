@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-
-
-    public interface IHero : ICharacter
+    internal class Item
     {
-        int or { get; set; }
-        int lvl { get; set; }
+        #region Propriéter
+        public int quantite { get; set; }
+        public Item(int quantite) 
+        { 
+            
+        }
+       
     }
-    
 }
+#endregion

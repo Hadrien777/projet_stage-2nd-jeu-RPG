@@ -43,16 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classe\Arc.cs" />
+    <Compile Include="classe\Bombe.cs" />
     <Compile Include="classe\Charactere.cs" />
     <Compile Include="classe\Combat.cs" />
+    <Compile Include="classe\Epee.cs" />
     <Compile Include="classe\Guerrier.cs" />
     <Compile Include="classe\Hero.cs" />
     <Compile Include="classe\ICharacter.cs" />
     <Compile Include="classe\IHero.cs" />
     <Compile Include="classe\IMonstre.cs" />
+    <Compile Include="classe\Item.cs" />
     <Compile Include="classe\Mage.cs" />
     <Compile Include="classe\IMap.cs" />
     <Compile Include="classe\Monstre.cs" />
+    <Compile Include="classe\PotionSoin.cs" />
     <Compile Include="classe\Prêtre.cs" />
     <Compile Include="classe\Roublard.cs" />
     <Compile Include="classe\WorldEngine.cs" />

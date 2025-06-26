@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-
-
-    public interface IHero : ICharacter
+    internal class Arc : Item
     {
-        int or { get; set; }
-        int lvl { get; set; }
+        public int quantite { get; set; }
+        public Arc(int quantite) : base(quantite)
+        {
+
+        }
     }
-    
 }

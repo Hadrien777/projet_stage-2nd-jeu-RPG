@@ -80,14 +80,14 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
         public virtual void Attaquer(ICharacter Attaquant, ICharacter Cible)
         {
-            Console.WriteLine(Attaquant.nom +" attaque " + Cible.nom);
+            Console.WriteLine(this.nom +" attaque " + Cible.nom);
         }
         
         public void Blesser(ICharacter Attaquant , ICharacter Cible)
         {
             Console.WriteLine(Cible.nom + " crie Ailllle!!!");
             Cible.PV = Cible.PV - Attaquant.dmg;
-            if (Cible.PV > 0)
+            if (Cible.PV < 0)
             {
                 Cible.PV = 0;
             }
@@ -101,7 +101,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
         public void Mourir()
         {
-            Console.WriteLine(this.nom + " est Mort");
+           Console.WriteLine(this.nom + " est Mort");
         }
 
 

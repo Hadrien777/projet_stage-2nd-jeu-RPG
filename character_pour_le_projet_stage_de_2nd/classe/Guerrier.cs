@@ -68,7 +68,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             DefPropriete(att,PVMax, dmg);
 
             Console.WriteLine(att);
-            Console.WriteLine("Guerrier et j'ai " +  caracteristiques["FORCE"] + " en Force !!!!  mais que  " + caracteristiques["DEXTERITE"] + " en dexteritées (-_-°) ET j'ai " + this.PV + " EN PV");
+            Console.WriteLine("je m'appelle "+ nom +" et j'ai " +  caracteristiques["FORCE"] + " en Force !!!!  mais que  " + caracteristiques["DEXTERITE"] + " en dexteritées (-_-°) ET j'ai " + this.PV + " EN PV");
         }
 
 
@@ -80,10 +80,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             PVMax = 10 + bonusCaracteristiques["CONSTITUTION"] + lvl;
             this.PV = PVMax;
             this.dmg = this.att * bonusCaracteristiques["FORCE"] + 4;
-        }
-        public override void Attaquer(ICharacter Attaquant, ICharacter Cible)
-        {
-            Console.WriteLine("Guerrier attaque " + Cible.nom);
         }
     }
 }
