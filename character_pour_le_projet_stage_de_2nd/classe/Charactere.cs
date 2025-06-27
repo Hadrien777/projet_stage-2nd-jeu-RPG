@@ -100,6 +100,17 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             Console.WriteLine(this.nom + " crie HUAAAAAAAAAAAAA!!");
         }
 
+        public void BlesserMagiquement(ICharacter Attaquant, ICharacter Cible)
+        {
+            Console.WriteLine(Cible.nom + " crie Ailllle!!!");
+            Cible.PV = Cible.PV - WorldEngine.GetRandomValue(5,10);
+            if (Cible.PV <= 0)
+            {
+                Cible.PV = 0;
+                Mourir(Cible);
+            }
+            Console.WriteLine("Il reste " + Cible.PV + " PV à " + Cible.nom);
+        }
         public void Mourir(ICharacter cible)
         {
             cible.estMort = true;

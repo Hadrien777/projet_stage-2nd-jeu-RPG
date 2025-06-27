@@ -9,8 +9,8 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 {
     public class Monstre : Character, IMonstre, ICharacter
     {
-        public int PV { get; set; }
-        public int dmg { get; set; }
+        new public int PV { get; set; }
+        new public int dmg { get; set; }
         public Monstre(string nom, int att, int lvl, int PV, int dmg) : base(nom, att, PV )
         {
             Console.WriteLine(nom + "de lvl" + lvl);
@@ -49,8 +49,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         void IMonstre.Crier(IMonstre monstre)
         {
             Console.WriteLine(this.nom + " crie HUAAAAAAAAAAAAA!!");
-            Console.WriteLine("La prochaine attaque du monstre sera plus forte");
-            monstre.dmg = monstre.dmg + 1;
+            
         }
     }
 }

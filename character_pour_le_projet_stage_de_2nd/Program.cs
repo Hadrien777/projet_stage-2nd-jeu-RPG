@@ -215,11 +215,66 @@ namespace character_pour_le_projet_stage_de_2nd
              }
        public void Eglise(Hero joueur)
         {
-            Console.WriteLine("Vous êtes dans l'Eglise");
+            string choixEglise; 
+            Console.WriteLine("Vous êtes dans l'Eglise, que voulez vous faire ? [1]Ressuciter un hero mort (30 piece d'or) [2]Partir");
+            choixEglise = Console.ReadLine();
+            if (choixEglise == "1" || choixEglise == "&")
+            {
+                if (equipe.Where(x => x != null).Any(x => x.estMort))
+                {
+                        string choixR;
+                        int R;
+                        Console.WriteLine("qui voulez vous ressuciter [1]"+equipe[1].nom+" [2]"+equipe[2].nom +" [3]"+ equipe[1].nom);
+                        choixR = Console.ReadLine();
+                        if (choixR == "1" || choixR == "&")
+                        {
+                            R = 0;
+                            if (equipe[R].estMort == false)
+                            {
+                                Console.WriteLine("ce personnage est Vivant");
+                            }
+                            else
+                            {
+                                equipe[R].estMort = false;
+                            }
+                        }
+                        else if (choixR == "é" || choixR == "2")
+                        {
+                            R = 1;
+                            if (equipe[R].estMort == false)
+                            {
+                                Console.WriteLine("ce personnage est Vivant");
+                            }
+                            else
+                            {
+                                equipe[R].estMort = false;
+                            }
+                        }
+                        else if (choixR == "3" || choixR == "\"")
+                        {
+                            R = 2;
+                            if (equipe[R].estMort == false)
+                            {
+                                Console.WriteLine("ce personnage est Vivant");
+                            }
+                            else
+                            {
+                                equipe[R].estMort = false;
+                            }
+                        }
+                }
+                else
+                {
+                    Console.WriteLine("personne dans votre equipe est mort\n");
+                }
+            }
+            else if (choixEglise == "2" || choixEglise == "é")
+            {
+               
+            }
         }
        public void GuilDesAventurier(Hero joueur)
        {
-
             Console.WriteLine("Vous êtes dans la Guilde des Aventurier");
        }
        public void Donjons(IHero joueur)
@@ -232,7 +287,10 @@ namespace character_pour_le_projet_stage_de_2nd
              {
                Console.WriteLine("Victoire vous obtener 10 or et 1 niveau ");
                joueur.or = joueur.or + 10;
-               joueur.lvl= joueur.lvl + 1;
+                for (int i = 0;i<=nbCompagnon;i++ )
+                {
+                    equipe[i].lvl++;
+                }
              }
             Console.ReadLine();
        }

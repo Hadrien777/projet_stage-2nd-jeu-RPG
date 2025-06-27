@@ -17,5 +17,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         void Crier();
         void Blesser(ICharacter Attaquant , ICharacter Cible);
         void Mourir(ICharacter Cible);
+        void BlesserMagiquement(ICharacter Attaquant, ICharacter Cible);
     }
 }

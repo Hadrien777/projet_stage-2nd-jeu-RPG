@@ -3,26 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|c:\\users\\edmond dant\u00E8s h.b\\documents\\projet_stage-2nd-jeu-rpg\\character_pour_le_projet_stage_de_2nd\\classe\\charactere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\charactere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|c:\\users\\edmond dant\u00E8s h.b\\documents\\projet_stage-2nd-jeu-rpg\\character_pour_le_projet_stage_de_2nd\\classe\\worldengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\worldengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|c:\\users\\edmond dant\u00E8s h.b\\documents\\projet_stage-2nd-jeu-rpg\\character_pour_le_projet_stage_de_2nd\\classe\\guerrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\guerrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,8 +11,32 @@
       "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|c:\\users\\edmond dant\u00E8s h.b\\documents\\projet_stage-2nd-jeu-rpg\\character_pour_le_projet_stage_de_2nd\\classe\\worldengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\worldengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|c:\\users\\edmond dant\u00E8s h.b\\documents\\projet_stage-2nd-jeu-rpg\\character_pour_le_projet_stage_de_2nd\\classe\\charactere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\charactere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|c:\\users\\edmond dant\u00E8s h.b\\documents\\projet_stage-2nd-jeu-rpg\\character_pour_le_projet_stage_de_2nd\\classe\\monstre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBAC64B4-BC89-44BF-9E1D-79DC288DFD20}|character_pour_le_projet_stage_de_2nd\\character_pour_le_projet_stage_de_2nd.csproj|solutionrelative:character_pour_le_projet_stage_de_2nd\\classe\\monstre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,37 +46,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "Monstre.cs",
+              "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Monstre.cs",
+              "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\classe\\Monstre.cs",
+              "ToolTip": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Monstre.cs",
+              "RelativeToolTip": "character_pour_le_projet_stage_de_2nd\\classe\\Monstre.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T12:56:12.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Charactere.cs",
               "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Charactere.cs",
               "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\classe\\Charactere.cs",
               "ToolTip": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Charactere.cs",
               "RelativeToolTip": "character_pour_le_projet_stage_de_2nd\\classe\\Charactere.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAA1wGkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswGkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-27T12:01:45.608Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "WorldEngine.cs",
               "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\WorldEngine.cs",
               "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\classe\\WorldEngine.cs",
               "ToolTip": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\WorldEngine.cs",
               "RelativeToolTip": "character_pour_le_projet_stage_de_2nd\\classe\\WorldEngine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-27T11:57:14.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Item.cs",
               "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\classe\\Item.cs",
@@ -85,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Guerrier.cs",
               "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Guerrier.cs",
               "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\classe\\Guerrier.cs",
@@ -98,52 +115,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Hero.cs",
               "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Hero.cs",
               "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\classe\\Hero.cs",
               "ToolTip": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Hero.cs",
               "RelativeToolTip": "character_pour_le_projet_stage_de_2nd\\classe\\Hero.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAA1wJgAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T08:51:21.834Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ICharacter.cs",
               "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\ICharacter.cs",
               "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\classe\\ICharacter.cs",
               "ToolTip": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\ICharacter.cs",
               "RelativeToolTip": "character_pour_le_projet_stage_de_2nd\\classe\\ICharacter.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T09:55:35.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Combat.cs",
               "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Combat.cs",
               "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\classe\\Combat.cs",
               "ToolTip": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\classe\\Combat.cs",
               "RelativeToolTip": "character_pour_le_projet_stage_de_2nd\\classe\\Combat.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAswK4AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAjwIwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-23T08:32:00.371Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\Program.cs",
               "RelativeDocumentMoniker": "character_pour_le_projet_stage_de_2nd\\Program.cs",
               "ToolTip": "C:\\Users\\Edmond Dant\u00E8s H.B\\Documents\\projet_stage-2nd-jeu-RPG\\character_pour_le_projet_stage_de_2nd\\Program.cs",
               "RelativeToolTip": "character_pour_le_projet_stage_de_2nd\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYBAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMBAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-23T08:33:37.083Z",
               "EditorCaption": ""

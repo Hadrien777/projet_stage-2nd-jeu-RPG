@@ -25,7 +25,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         {
             int AMonstre;
             Console.WriteLine("C'est au tour du " + Monstre.nom);
-            AMonstre = WorldEngine.GetRandomValue(1, 1);
+            AMonstre = WorldEngine.GetRandomValue(1, 2);
             if (AMonstre == 1)
             {
                 int C = WorldEngine.GetRandomValue(0, nbCompagnon);
@@ -46,6 +46,8 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             else if (AMonstre == 2)
             {
                 Monstre.Crier();
+                Console.WriteLine("La prochaine attaque du monstre sera plus forte");
+                Monstre.dmg = Monstre.dmg + 1;
             }
         }
         //tour de l'equipe
@@ -56,30 +58,34 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             {
                 Console.WriteLine("C'est au tour de " + equipe[i].nom + " Que faite vous ? \n [1] Ataquer [2]Crier [3]Utiliser un Objet [4] soigner un allier");
             }
+            else if (equipe[i] is Mage)
+            {
+                Console.WriteLine("C'est au tour de " + equipe[i].nom + " Que faite vous ? \n [1] Ataquer [2]Crier [3]Utiliser un Objet [4] utiliser un sort");
+            }
             else
             {
                 Console.WriteLine("C'est au tour de " + equipe[i].nom + " Que faite vous ? \n [1] Ataquer [2]Crier [3]Utiliser un Objet");
             }
                 
             choixJoueur = Console.ReadLine();
-                if (choixJoueur == "1" || choixJoueur == "&")
+            if (choixJoueur == "1" || choixJoueur == "&")
+            {
+                equipe[i].Attaquer(equipe[i], Monstre);
+                equipe[i].Blesser(equipe[i], Monstre);
+                if (Monstre.PV <= 0)
                 {
-                    equipe[i].Attaquer(equipe[i], Monstre);
-                    equipe[i].Blesser(equipe[i], Monstre);
-                    if (Monstre.PV <= 0)
-                    {
-                        Console.WriteLine("Bravo le monstre est mort");
-                    }
+                    Console.WriteLine("Bravo le monstre est mort");
                 }
-                else if (choixJoueur == "2" || choixJoueur == "é")
-                {
-                    equipe[i].Crier();
-                    fuirMonstre++;
-                }
-                else if (choixJoueur == "3" || choixJoueur == "\"")
-                {
-                    Console.WriteLine("[1]Une Bombe [2]Potion de soins ");
-                    string choixItem=Console.ReadLine();
+            }
+            else if (choixJoueur == "2" || choixJoueur == "é")
+            {
+                equipe[i].Crier();
+                fuirMonstre++;
+            }
+            else if (choixJoueur == "3" || choixJoueur == "\"")
+            {
+                Console.WriteLine("[1]Une Bombe [2]Potion de soins ");
+                string choixItem = Console.ReadLine();
                 if (choixItem == "1" || choixItem == "&" && inventaire.inventaire.Exists(x => x is Bombe))
                 {
                     Console.WriteLine("Vous utiliser la bombe");
@@ -91,7 +97,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
                         equipe[O].PV = equipe[O].PV - WorldEngine.GetRandomValue(3, 5);
                     }
                     var bombe = inventaire.inventaire.FirstOrDefault(x => x is Bombe);
-                    if (bombe != null) 
+                    if (bombe != null)
                     {
                         inventaire.inventaire.Remove(bombe);
                     }
@@ -102,38 +108,42 @@ namespace character_pour_le_projet_stage_de_2nd.classe
                     equipe[i].PV = equipe[i].PVMax;
                     Console.WriteLine(equipe[i].nom + "a regagner tous c'est PV ");
                 }
-                }
-                else if (equipe[i] is Prêtre && choixJoueur == "4" || choixJoueur == "'")
+            }
+            else if (equipe[i] is Prêtre && choixJoueur == "4" || choixJoueur == "'")
+            {
+                string Choixsoins;
+                Console.WriteLine("qui voulez vous soignez");
+                for (int s = 0; s <= nbCompagnon; s++)
                 {
-                    string Choixsoins;
-                    Console.WriteLine("qui voulez vous soignez");
-                     for (int s = 0; s<=nbCompagnon; s++)
-                     {
-                        Console.WriteLine("["+(s+1)+"] pour soigner"+equipe[s].nom);
-                     }
-                     Choixsoins = Console.ReadLine();
-                    int f; 
-                    if (Choixsoins == "1" || Choixsoins == "&")
-                    {
+                    Console.WriteLine("[" + (s + 1) + "] pour soigner" + equipe[s].nom);
+                }
+                Choixsoins = Console.ReadLine();
+                int f;
+                if (Choixsoins == "1" || Choixsoins == "&")
+                {
                     f = 0;
-                    equipe[f].PV= equipe[i].PV + WorldEngine.GetRandomValue(3, 5);
-                    }
-                    else if (Choixsoins == "2" || Choixsoins == "é")
-                    {
-                    f = 1;
                     equipe[f].PV = equipe[i].PV + WorldEngine.GetRandomValue(3, 5);
-                }   
-                    else if (Choixsoins == "3" || Choixsoins == "\"")
-                    {
-                    f = 1;
-                    equipe[f].PV = equipe[i].PV + WorldEngine.GetRandomValue(3, 5);
-                    }
-
                 }
-                else
+                else if (Choixsoins == "2" || Choixsoins == "é")
                 {
-                Console.WriteLine(equipe[i].nom + " begaye et passe son tour");
+                    f = 1;
+                    equipe[f].PV = equipe[i].PV + WorldEngine.GetRandomValue(3, 5);
                 }
+                else if (Choixsoins == "3" || Choixsoins == "\"")
+                {
+                    f = 1;
+                    equipe[f].PV = equipe[i].PV + WorldEngine.GetRandomValue(3, 5);
+                }
+            }
+            else if (equipe[i] is Mage && choixJoueur == "4" || choixJoueur == "'")
+            {
+                Console.WriteLine(equipe[i].nom + " lance une boule de feu");
+                equipe[i].BlesserMagiquement(equipe[i], Monstre);
+            }
+            else
+            {
+                 Console.WriteLine(equipe[i].nom + " begaye et passe son tour");
+            }
         }
 
         //L'Heure du DUDUDDUUUDU DUEL!!!
