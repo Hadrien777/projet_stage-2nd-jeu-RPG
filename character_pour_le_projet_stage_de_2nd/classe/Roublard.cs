@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    internal class Roublard : Hero
+    internal class Roublard : Hero,IHero, ICharacter
     {
 
         public ClasseHero classePerso = ClasseHero.GUERRIER;
 
         #region Propriete
-        public int dmg { get; set; }
-        public int PV { get; set; }
+        new public int dmg { get; set; }
+        new public int PV { get; set; }
         public int att { get; set; }
+
         public int Fval { get; set; }
-
         public int Dval { get; set; }
-
         public int Conval { get; set; }
         public int Ival { get; set; }
         public int Sval { get; set; }
@@ -46,10 +45,8 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             GenrCarac(nomCarac, val);
 
         }
-        public Roublard (string nom, int att, int lvl, int DAtt,int PV, int dmg,int ClArmure, int or) : base(nom, att, lvl, DAtt,PV,dmg,ClArmure, or)
+        public Roublard (string nom, int att, int lvl, int DAtt,int PV, int dmg,int ClArmure, int or) : base(nom, att, dmg, lvl,DAtt,PV,ClArmure, or)
         {
-
-
             GenererCarac("FORCE", Fval);
             GenererCarac("DEXTERITE", Dval);
             GenererCarac("CONSTITUTION", Conval);
@@ -63,7 +60,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             }
             DefPropriete(att, PVMax, dmg);
 
-            Console.WriteLine(att);
             Console.WriteLine("Je m'appelle "+nom+ "et j'ai " + caracteristiques["FORCE"] + " en Force !!!!  mais que  " + caracteristiques["DEXTERITE"] + " en dexteritées (-_-°) ET j'ai " + this.PV + " EN PV");
         }
         // Définir les propriété
@@ -72,11 +68,8 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             this.att = att;
             PVMax = 10 + bonusCaracteristiques["CONSTITUTION"] + lvl;
             this.PV = PVMax;
-            this.dmg = this.att * bonusCaracteristiques["FORCE"]+2;
-
+            this.dmg = this.att * bonusCaracteristiques["FORCE"] + 2;
         }
-
-
     }
 }
 #endregion

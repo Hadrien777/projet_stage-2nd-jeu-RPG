@@ -30,8 +30,5 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
             return xpSuivant[lvl];
         }
-        
-
-       
     }
 }

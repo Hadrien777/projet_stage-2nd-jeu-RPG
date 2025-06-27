@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    public class Item
+    public class Inventaire
     {
-        #region Propriéter
-        public int quantite { get; set; }
-        public Item(int quantite) 
-        { 
-            
+        public List<Item>inventaire  { get ; set ;}
+        public Inventaire(List<Item> inventaire)
+        {
+            this.inventaire = inventaire;
         }
     }
 }
-#endregion

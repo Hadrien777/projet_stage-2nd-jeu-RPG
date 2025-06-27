@@ -14,17 +14,14 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         #region Propriete
         new public int dmg { get; set; }
         new public int PV { get; set; }
-        new public int ClArmure { get; set; }
         public int att { get; set; }
+
         public int Fval { get; set; }
-
         public int Dval { get; set; }
-
         public int Conval { get; set; }
         public int Ival { get; set; }
         public int Sval { get; set; }
         public int Chval { get; set; }
-
 
         // GenererCarc
         public void GenererCarac(string nomCarac, int val)
@@ -48,12 +45,9 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
         }
 
-
         // Constructeur
-        public Guerrier(string nom, int att, int lvl, int DAtt, int PV,int dmg,int ClArmure,int or) : base(nom, att, lvl, DAtt, PV,dmg, ClArmure,or)
+        public Guerrier(string nom, int att, int lvl, int DAtt, int PV,int dmg,int ClArmure,int or) : base(nom, att, dmg,lvl, DAtt, PV, ClArmure,or)
         {
-        
-
             GenererCarac("FORCE", Fval);
             GenererCarac("DEXTERITE", Dval);
             GenererCarac("CONSTITUTION", Conval);
@@ -71,8 +65,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             Console.WriteLine("je m'appelle "+ nom +" et j'ai " +  caracteristiques["FORCE"] + " en Force !!!!  mais que  " + caracteristiques["DEXTERITE"] + " en dexteritées (-_-°) ET j'ai " + this.PV + " EN PV");
         }
 
-
-        
         // Définir les propriété
         public void DefPropriete(int att,int PV, int dmg)
         {

@@ -17,8 +17,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         public Dictionary<string, int> caracteristiques;
         public Dictionary<string, int> bonusCaracteristiques;
 
-
-
         #region Proriété
         public int lvl
         {
@@ -38,7 +36,6 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             }
         }
         public int PVMax { get; set; }
-
         new public int dmg { get; set; }
         public int or {  get; set; }    
 
@@ -154,8 +151,4 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         }
     }
 }   public enum ClasseHero { GUERRIER, MAGE, PRETRE, VOLEUR }
-
-   
-
-  
 #endregion

@@ -17,7 +17,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         public string nom => Nom;
 
 
-
+        public bool estMort {  get; set; }
         public int PointDeVie
         {
             get => pointDeVie;
@@ -87,9 +87,10 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         {
             Console.WriteLine(Cible.nom + " crie Ailllle!!!");
             Cible.PV = Cible.PV - Attaquant.dmg;
-            if (Cible.PV < 0)
+            if (Cible.PV <= 0)
             {
                 Cible.PV = 0;
+                Mourir(Cible);
             }
             Console.WriteLine("Il reste " + Cible.PV + " PV à " + Cible.nom);
         }
@@ -99,9 +100,10 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             Console.WriteLine(this.nom + " crie HUAAAAAAAAAAAAA!!");
         }
 
-        public void Mourir()
+        public void Mourir(ICharacter cible)
         {
-           Console.WriteLine(this.nom + " est Mort");
+            cible.estMort = true;
+            Console.WriteLine(cible.nom + " est Mort");
         }
 
 

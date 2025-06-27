@@ -21,6 +21,9 @@ namespace character_pour_le_projet_stage_de_2nd
         public int MP { get; set; }
         public int nbCompagnon { get; set; }
         public int or { get; set; }
+        public int nbMort { get; set; }
+
+        public Inventaire inventaire = new Inventaire(new List<Item>());
 
         public static IHero[] equipe = new Hero[3];
 
@@ -78,7 +81,6 @@ namespace character_pour_le_projet_stage_de_2nd
                 carte.map(joueur);
             }
         }
-        List<Item> Inventaire = new List<Item>();
         #endregion
 
 
@@ -97,25 +99,25 @@ namespace character_pour_le_projet_stage_de_2nd
                 {
                     Console.WriteLine("vous achheter une bombe");
                     joueur.or = joueur.or - 10;
-                    Inventaire.Add(new Bombe(1)); 
+                    inventaire.inventaire.Add(new Bombe(1)); 
                 }
                 else if (choixObjet == "2" || choixObjet == "é")
                 {
                     Console.WriteLine("vous achetez une épée");
                     joueur.or = joueur.or - 5;
-                    Inventaire.Add(new Epee(1));
+                    inventaire.inventaire.Add(new Epee(1));
                 }
                 else if (choixObjet == "3" || choixObjet == "\"")
                 {
                     Console.WriteLine("Vous acheter un arc ");
                     joueur.or = joueur.or - 5;
-                    Inventaire.Add(new Arc(1));
+                    inventaire.inventaire.Add(new Arc(1));
                 }
                 else if (choixObjet == "4" || choixObjet == "'")
                 {
                     Console.WriteLine("Vous achetez une potion de soin");
                     joueur.or = joueur.or - 10;
-                    Inventaire.Add(new PotionSoin(1));
+                    inventaire.inventaire.Add(new PotionSoin(1));
                 }
                 else if (choixObjet == "(" || choixObjet == "5")
                 {
@@ -141,8 +143,12 @@ namespace character_pour_le_projet_stage_de_2nd
                     if (ChoixJoueur == "1" || ChoixJoueur == "&")
                     {
                         Console.WriteLine("vous passer une merveilleuse nuit");
-                        joueur.PV = joueur.PVMax;
-                    Console.WriteLine("PV =" + joueur.PV);
+                        Console.WriteLine("PV =" + joueur.PV);
+                        for(int i = 0; i<=nbCompagnon; i++)
+                        {
+                        equipe[i].PV = equipe[i].PVMax;
+                            Console.WriteLine(equipe[i].nom+" à "+equipe[i].PV +" PV");
+                        }
                     }
                     else if (ChoixJoueur == "2" || ChoixJoueur == "é")
                     {
@@ -216,12 +222,12 @@ namespace character_pour_le_projet_stage_de_2nd
 
             Console.WriteLine("Vous êtes dans la Guilde des Aventurier");
        }
-       public void Donjons(IHero joueur )
+       public void Donjons(IHero joueur)
        {
             Console.WriteLine("Vous entrer dans le Donjon");
             Monstre goule = new Monstre("goule", 1, WorldEngine.GetRandomValue(1+joueur.lvl, 5+joueur.lvl), PV, dmg);
             Combat combat = new Combat(goule, equipe);
-            combat.lancerCombat(nbCompagnon );
+            combat.lancerCombat(nbCompagnon, inventaire, nbMort);
              if (joueur.PV >0)
              {
                Console.WriteLine("Victoire vous obtener 10 or et 1 niveau ");

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    internal class Mage : Hero,IHero
+    internal class Mage : Hero,IHero, ICharacter
     {
             public ClasseHero classePerso = ClasseHero.MAGE;
 
@@ -47,7 +47,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
 
 
         // Constructeur
-        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg,int MP,int ClArmure,int or) : base(nom, att, lvl, DAtt, PV,dmg, ClArmure,or)
+        public Mage(string nom, int att, int lvl, int DAtt, int PV, int dmg,int MP,int ClArmure,int or) : base(nom, att, dmg, lvl, DAtt, PV, ClArmure, or)
         {
 
             GenererCarac("FORCE", Fval);
@@ -76,7 +76,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             this.att = att;
             PVMax = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
             this.PV = PVMax;
-            this.dmg = this.att * bonusCaracteristiques["FORCE"];
+            this.dmg = this.att * bonusCaracteristiques["FORCE"] + 4;
             this.MP = caracteristiques["INTELIGENCE"] + bonusCaracteristiques["SAGESSE"];
         }
 

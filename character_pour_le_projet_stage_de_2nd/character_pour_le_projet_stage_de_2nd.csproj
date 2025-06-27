@@ -53,6 +53,7 @@
     <Compile Include="classe\ICharacter.cs" />
     <Compile Include="classe\IHero.cs" />
     <Compile Include="classe\IMonstre.cs" />
+    <Compile Include="classe\Inventaire.cs" />
     <Compile Include="classe\Item.cs" />
     <Compile Include="classe\Mage.cs" />
     <Compile Include="classe\IMap.cs" />

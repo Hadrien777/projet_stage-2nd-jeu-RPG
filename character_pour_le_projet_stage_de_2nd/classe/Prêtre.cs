@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 namespace character_pour_le_projet_stage_de_2nd.classe
 {
-    internal class Prêtre : Hero
+    internal class Prêtre : Hero , IHero, ICharacter
     {
         public ClasseHero classePerso = ClasseHero.MAGE;
 
         #region Propriete
-        public int dmg { get; set; }
-        public int PV { get; set; }
-        public int ClArmure { get; set; }
+       new public int dmg { get; set; }
+       new public int PV { get; set; }
         public int att { get; set; }
 
         public int Fval { get; set; }
@@ -49,7 +48,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
         }
 
         //constructeur
-        public Prêtre(string nom, int att, int lvl, int DAtt, int PV, int dmg, int ClArmure, int or) : base(nom, att, lvl, DAtt, PV,  dmg,ClArmure,or)
+        public Prêtre(string nom, int att, int lvl, int DAtt, int PV, int dmg, int ClArmure, int or) : base(nom, att, dmg, lvl, DAtt, PV, ClArmure, or)
         {
 
             
@@ -80,7 +79,7 @@ namespace character_pour_le_projet_stage_de_2nd.classe
             this.att = 1;
             PVMax = 6 + bonusCaracteristiques["CONSTITUTION"] + lvl;
             this.PV= PVMax;
-            this.dmg = this.att * bonusCaracteristiques["FORCE"];
+            this.dmg = this.att * bonusCaracteristiques["FORCE"]+4;
         }
     }
 }
